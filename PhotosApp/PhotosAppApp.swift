@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PhotosAppApp: App {
+    @StateObject var photosModelData = PhotosModelData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(photosModelData)
         }
     }
 }

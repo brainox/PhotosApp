@@ -9,15 +9,16 @@ import SwiftUI
 import Combine
 import  RealmSwift
 
-class PhotosDataService: ObservableObject {
+class PhotosModelData: ObservableObject {
     @Published var allPhotos: [Photo] = []
+    @Published var allFavPhotos: [Photo] = []
     
     var photosSubscription: AnyCancellable?
     private let realm = try! Realm()
     let realmItem = PhotosDB()
     
     init() {
-       getPhotos()
+        getPhotos()
     }
     
     private func getPhotos() {
@@ -44,25 +45,19 @@ class PhotosDataService: ObservableObject {
                     print(error.localizedDescription)
                 }
             } receiveValue: { [weak self] (returnedPhotosData) in
-//                print(returnedPhotosData)
                 self?.allPhotos = returnedPhotosData.photos.photo
-//                self?.savePhotoToRealm (returnedPhotosData.photos.photo)
+                
+                let item = self?.realm.objects(PhotosDB.self)
+                if let eachPhoto = self?.allPhotos {
+                    for photo in eachPhoto {
+                        if let _ = item?.first(where: { photoDB in
+                            photoDB.id == photo.id
+                        }) {
+                            self?.allFavPhotos.append(photo)
+                        }
+                    }
+                }
                 self?.photosSubscription?.cancel()
             }
-
     }
-//
-//    private func savePhotoToRealm (_ photoArray: [Photo]) {
-//
-//        photoArray.forEach { photo in
-//            realm.beginWrite()
-//            realmItem.imageString = photo.urlM
-//            realmItem.ownerName = photo.ownername
-//            realmItem.title = photo.title
-//            realm.add(realmItem)
-//            try! realm.commitWrite()
-////            allPhotos.append(realmItem)
-//        }
-//    }
-    
 }

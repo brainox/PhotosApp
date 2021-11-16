@@ -9,14 +9,14 @@ import Foundation
 import RealmSwift
 
 class PhotosDB: Object {
-    @Persisted var id = UUID()
-    
+    @Persisted var id = "0"
+    @Persisted var primaryId = UUID().uuidString
     @Persisted var isFavourite = false
     @Persisted var ownerName = ""
     @Persisted var title = ""
     @Persisted var imageString = ""
     
     override static func primaryKey() -> String? {
-        "id"
+        "primaryId"
     }
 }

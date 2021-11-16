@@ -6,15 +6,32 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct FavouritesView: View {
+    
+    @EnvironmentObject var photosDataModel: PhotosModelData
+    
+    let item = try! Realm().objects(PhotosDB.self)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            VStack(spacing: 0) {
+                ForEach(item, id:\.id) { favData in 
+                    if let foundPhoto = photosDataModel.allPhotos.first { thePhoto in
+                        thePhoto.id == favData.id
+                    } {
+                        PhotoView(screen: "Fav", photo: foundPhoto)
+                    }
+                }
+            }
+        }
     }
 }
 
-struct FavouritesView_Previews: PreviewProvider {
-    static var previews: some View {
-        FavouritesView()
-    }
-}
+//struct FavouritesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FavouritesView()
+//            .environmentObject(PhotosModelData())
+//    }
+//}

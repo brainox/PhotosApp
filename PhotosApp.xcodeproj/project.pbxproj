@@ -11,6 +11,7 @@
 		B43B6E84274228B200A1007E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B43B6E83274228B200A1007E /* RealmSwift */; };
 		B43B6E862742291E00A1007E /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B6E852742291E00A1007E /* PhotosViewModel.swift */; };
 		B43B6E89274229A000A1007E /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B6E88274229A000A1007E /* Photos.swift */; };
+		B43B6E8C27425D8B00A1007E /* FavouriteModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43B6E8B27425D8B00A1007E /* FavouriteModelData.swift */; };
 		B4B9CCE0274141B90022BEB4 /* PhotosAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCDF274141B90022BEB4 /* PhotosAppApp.swift */; };
 		B4B9CCE2274141B90022BEB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCE1274141B90022BEB4 /* ContentView.swift */; };
 		B4B9CCE4274141BC0022BEB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B9CCE3274141BC0022BEB4 /* Assets.xcassets */; };
@@ -20,7 +21,7 @@
 		B4B9CCF6274172EF0022BEB4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCF5274172EF0022BEB4 /* Extensions.swift */; };
 		B4B9CCF8274177880022BEB4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCF7274177880022BEB4 /* NetworkManager.swift */; };
 		B4B9CCFA274178000022BEB4 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCF9274178000022BEB4 /* Contants.swift */; };
-		B4B9CCFC2741884F0022BEB4 /* PhotosDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCFB2741884F0022BEB4 /* PhotosDataService.swift */; };
+		B4B9CCFC2741884F0022BEB4 /* PhotosModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCFB2741884F0022BEB4 /* PhotosModelData.swift */; };
 		B4B9CCFF2741A2FF0022BEB4 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CCFE2741A2FE0022BEB4 /* PhotoView.swift */; };
 		B4B9CD042741C23A0022BEB4 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CD032741C23A0022BEB4 /* FavouritesView.swift */; };
 		B4B9CD0C2741CBF10022BEB4 /* PhotosDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B9CD0B2741CBF10022BEB4 /* PhotosDB.swift */; };
@@ -29,8 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B43B6E852742291E00A1007E /* PhotosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosViewModel.swift; path = PhotosApp/RealmManager/RealmDatabase/PhotosViewModel.swift; sourceTree = SOURCE_ROOT; };
+		B43B6E852742291E00A1007E /* PhotosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosViewModel.swift; path = PhotosApp/ViewModel/PhotosViewModel.swift; sourceTree = SOURCE_ROOT; };
 		B43B6E88274229A000A1007E /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		B43B6E8B27425D8B00A1007E /* FavouriteModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModelData.swift; sourceTree = "<group>"; };
 		B4B9CCDC274141B90022BEB4 /* PhotosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B9CCDF274141B90022BEB4 /* PhotosAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAppApp.swift; sourceTree = "<group>"; };
 		B4B9CCE1274141B90022BEB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,7 +44,7 @@
 		B4B9CCF5274172EF0022BEB4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B4B9CCF7274177880022BEB4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B4B9CCF9274178000022BEB4 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
-		B4B9CCFB2741884F0022BEB4 /* PhotosDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDataService.swift; sourceTree = "<group>"; };
+		B4B9CCFB2741884F0022BEB4 /* PhotosModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModelData.swift; sourceTree = "<group>"; };
 		B4B9CCFE2741A2FE0022BEB4 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		B4B9CD032741C23A0022BEB4 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		B4B9CD0B2741CBF10022BEB4 /* PhotosDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDB.swift; sourceTree = "<group>"; };
@@ -72,6 +74,16 @@
 			path = PhotosApp/Model;
 			sourceTree = SOURCE_ROOT;
 		};
+		B43B6E8A2742577C00A1007E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4B9CCFB2741884F0022BEB4 /* PhotosModelData.swift */,
+				B43B6E8B27425D8B00A1007E /* FavouriteModelData.swift */,
+				B43B6E852742291E00A1007E /* PhotosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B4B9CCD3274141B90022BEB4 = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +103,12 @@
 		B4B9CCDE274141B90022BEB4 /* PhotosApp */ = {
 			isa = PBXGroup;
 			children = (
-				B4B9CD0D2741D9F50022BEB4 /* RealmManager */,
-				B4B9CCFD2741A2E40022BEB4 /* Views */,
-				B4B9CCF4274172E10022BEB4 /* Resources */,
 				B4B9CCDF274141B90022BEB4 /* PhotosAppApp.swift */,
+				B4B9CCFD2741A2E40022BEB4 /* Views */,
+				B43B6E87274229A000A1007E /* Model */,
+				B43B6E8A2742577C00A1007E /* ViewModel */,
+				B4B9CD0D2741D9F50022BEB4 /* RealmManager */,
+				B4B9CCF4274172E10022BEB4 /* Resources */,
 				B4B9CCF227415ACE0022BEB4 /* ErrorType.swift */,
 				B4B9CCE3274141BC0022BEB4 /* Assets.xcassets */,
 				B4B9CCE8274141BC0022BEB4 /* Info.plist */,
@@ -117,7 +131,6 @@
 				B4B9CCF5274172EF0022BEB4 /* Extensions.swift */,
 				B4B9CCF9274178000022BEB4 /* Contants.swift */,
 				B4B9CCF7274177880022BEB4 /* NetworkManager.swift */,
-				B4B9CCFB2741884F0022BEB4 /* PhotosDataService.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,10 +138,10 @@
 		B4B9CCFD2741A2E40022BEB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4B9CCE1274141B90022BEB4 /* ContentView.swift */,
 				B4B9CCEE2741439E0022BEB4 /* Home.swift */,
 				B4B9CCFE2741A2FE0022BEB4 /* PhotoView.swift */,
 				B4B9CD032741C23A0022BEB4 /* FavouritesView.swift */,
-				B4B9CCE1274141B90022BEB4 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,9 +158,7 @@
 		B4B9CD122741DD6F0022BEB4 /* RealmDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				B43B6E852742291E00A1007E /* PhotosViewModel.swift */,
 				B4B9CD0B2741CBF10022BEB4 /* PhotosDB.swift */,
-				B43B6E87274229A000A1007E /* Model */,
 			);
 			path = RealmDatabase;
 			sourceTree = "<group>";
@@ -236,12 +247,13 @@
 				B4B9CCF327415ACE0022BEB4 /* ErrorType.swift in Sources */,
 				B4B9CCFF2741A2FF0022BEB4 /* PhotoView.swift in Sources */,
 				B43B6E862742291E00A1007E /* PhotosViewModel.swift in Sources */,
+				B43B6E8C27425D8B00A1007E /* FavouriteModelData.swift in Sources */,
 				B43B6E89274229A000A1007E /* Photos.swift in Sources */,
 				B4B9CCFA274178000022BEB4 /* Contants.swift in Sources */,
 				B4B9CD042741C23A0022BEB4 /* FavouritesView.swift in Sources */,
 				B4B9CCF8274177880022BEB4 /* NetworkManager.swift in Sources */,
 				B4B9CCEF2741439E0022BEB4 /* Home.swift in Sources */,
-				B4B9CCFC2741884F0022BEB4 /* PhotosDataService.swift in Sources */,
+				B4B9CCFC2741884F0022BEB4 /* PhotosModelData.swift in Sources */,
 				B4B9CD0C2741CBF10022BEB4 /* PhotosDB.swift in Sources */,
 				B4B9CCE0274141B90022BEB4 /* PhotosAppApp.swift in Sources */,
 			);

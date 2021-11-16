@@ -9,12 +9,6 @@ import Foundation
 
 let apiKey = "4229581a465a3a6b913eef2344e18abe"
 
-//struct PhotosDataModel: Identifiable, Decodable {
-//    var id: String
-//    var title: String
-//    var ownername: String
-//}
-
 struct SessionResponse: Codable {
     let photos: Photos
 }
@@ -25,12 +19,12 @@ struct Photos: Codable {
 }
 
 // MARK: - Photo
-struct Photo: Codable, Identifiable {
+struct Photo: Hashable, Codable, Identifiable {
     let id: String
     let title: String
     let ownername: String
     let urlM: String
-    var isFavorite: Bool?
+    var isFavorite: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case id, title, ownername

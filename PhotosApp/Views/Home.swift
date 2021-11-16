@@ -9,29 +9,33 @@ import SwiftUI
 import RealmSwift
 
 struct Home: View {
-    @ObservedObject var photosData = PhotosDataService()
+    @EnvironmentObject var photosDataModel: PhotosModelData
     @State var isSet: Bool = false
-
-    
     @ObservedObject var photosViewModel = PhotosViewModel()
+    @State var selectedPhoto: Photo? = nil
     
     var body: some View {
         ScrollView{
             VStack(spacing: 0) {
-                ForEach(photosData.allPhotos, id:\.id) { photoData in
+                ForEach(photosDataModel.allPhotos, id:\.id) { photoData in
                     
-//                    PhotoView(imageUrlString: photoData.urlM, title: photoData.ownername, subtitle: photoData.title, screenWidth: UIScreen.main.bounds.width, screenHeight: UIScreen.main.bounds.width*0.64)
-                    PhotoView(isSet: $isSet, imageUrlString: photoData.urlM, title: photoData.ownername, subtitle: photoData.title, screenWidth: UIScreen.main.bounds.width, screenHeight: UIScreen.main.bounds.width*0.64)
+                    //                    PhotoView(isSet: $isSet, id: photoData.id, imageUrlString: photoData.urlM, title: photoData.ownername, subtitle: photoData.title, screenWidth: UIScreen.main.bounds.width, screenHeight: UIScreen.main.bounds.width*0.64)
+                    PhotoView( screen: "Home", photo: photoData)
+                       
                 }
             }
-            
         }
     }
+    
+    //    func saveFavorite() {
+    //        if photosDataModel.allPhotos.first(where: )
+    //    }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .environmentObject(PhotosModelData())
         
     }
 }

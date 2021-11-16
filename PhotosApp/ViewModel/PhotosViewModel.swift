@@ -22,14 +22,4 @@ class PhotosViewModel: ObservableObject {
         self.imageString = imageString
         self.isFavorite = isFavorite
     }
-    
-    func addToFavorites(photoToFav:PhotosDB) {
-        let photoDatabase = PhotosDB()
-        photoDatabase.id = photoToFav.id
-        photoDatabase.ownerName = photoToFav.ownerName
-        photoDatabase.imageString = photoToFav.imageString
-        photoDatabase.isFavourite = photoToFav.isFavourite
-        
-        RealmManager.Shared.create(photoToFav)
-    }
 }
