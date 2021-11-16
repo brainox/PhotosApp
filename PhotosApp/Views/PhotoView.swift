@@ -60,6 +60,7 @@ struct PhotoView: View {
                 } {
                     if let indexPos = photosDataModel.allFavPhotos.firstIndex(of: photo) {
                         photosDataModel.allFavPhotos.remove(at: indexPos)
+                        print(photosDataModel.allFavPhotos)
                         favouriteDataModel.delete(photoToDelete: itemToDelete)
                     }
                 }

@@ -12,7 +12,9 @@ class RealmManager: ObservableObject {
     
     private init() {}
     
-    static let Shared = RealmManager
+    static let Shared = RealmManager()
+    
+    
     
     func create<T: Object>(_ object: T) {
         objectWillChange.send()
